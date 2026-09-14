@@ -2,3 +2,6 @@
 .vs/
 CMakeSettings.json
 out/
+
+# CMake superbuild output (src/build/x64, src/build/x86, ...)
+src/build/
