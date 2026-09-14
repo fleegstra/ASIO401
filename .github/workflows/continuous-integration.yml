@@ -74,7 +74,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: sigstore
-          path: "*.sigstore"
+          path: "*.sigstore.json"
           if-no-files-found: error
   release:
     runs-on: ubuntu-latest
