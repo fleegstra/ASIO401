@@ -2,6 +2,10 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      # libsndfile's cmake_minimum_required predates CMake 4's removal of
+      # compatibility with CMake < 3.5; this tells CMake to configure it anyway.
+      CMAKE_POLICY_VERSION_MINIMUM: "3.5"
     strategy:
       fail-fast: false
       matrix:
