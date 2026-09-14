@@ -68,7 +68,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: ASIO401-installer
-      - uses: sigstore/gh-action-sigstore-python@v2.1.0
+      - uses: sigstore/gh-action-sigstore-python@v3.5.0
         with:
           inputs: "*"
       - uses: actions/upload-artifact@v4
@@ -91,7 +91,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: sigstore
-      - uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v2
         with:
           draft: true
           files: "*"
